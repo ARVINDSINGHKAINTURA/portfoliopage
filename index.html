@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+        .navbar {
+            background: #020202;
+            padding: 35px;
+            text-align: right;
+        }
+        .logo{
+            text-align: start;
+            color: #f512fd;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background: #d809ebc7;
+            border-radius: 5px;
+            box-shadow: 0 15px 25px  rgba(59, 238, 5, 0.781);
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 10%;
+            background-color: #0e0d0d;
+        }
+
+        .content {
+            max-width: 50%;
+            color: white;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin: 10px 0;
+        }
+
+        h2 span {
+            color: #00c3ff;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+                
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00c3ff;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #0051ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #b103dd;;
+        }
+
+        .image img {
+        width: 300px;
+        border-radius: 150px;
+        box-shadow: 0 0 20px #00c3ff;
+       }
+        
+        .projects-section {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        h2{
+            color: white;
+        }
+        .project-card {
+            background: #f3eeee;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 10px;
+            /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
+            display: inline-block;
+            width: 250px;
+        }
+        .project-cardall{
+            display: flexbox;
+        }
+        .project-card h3 {
+            margin: 10px 0;
+        }
+        .project-cardall :hover{
+            background-color: rgb(107, 198, 214);
+            box-shadow: 0 15px 25px  rgba(248, 2, 195, 0.979);
+        }
+        /* contact */
+        .contact {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 10%;
+            background-color: rgba(0, 18, 11);
+        }
+    
+
+        .contact-content {
+            max-width: 50%;
+        }
+
+        .contact-content h1 {
+            font-size: 40px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .contact-content p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #00c3ff;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .contact-info i {
+            color: #00c3ff;
+            margin-right: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00c3ff;
+        }
+
+        .contact-form {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            color: #e0e8eb;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-color: rgb(6, 50, 197);
+            background: #e7e5e5;
+            color: white;
+        }
+
+        .contact-form .btn {
+            padding: 10px 20px ;
+            background: #0051ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 30%;
+            align-self: center;
+        }
+
+        .contact-form .btn:hover {
+            background: #b103dd;
+        }
+        /* ABOUT US */
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 10%;
+        }
+
+        .about-image img {
+            width: 300px;
+            height: 300px;
+            box-shadow: 0 0 20px #c9f5ff;
+        }
+
+        .about-content {
+            max-width: 50%;
+            color: white;
+        }
+
+        .about-content h1 {
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        .about-content h2 {
+            font-size: 26px;
+            margin: 10px 0;
+        }
+
+        .about-content h2 span {
+            color: #00c3ff;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .about-content .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #0051ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .about-content .btn:hover {
+            background: #b103dd;;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <p>arvind programming</p>
+        </div>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+        <section class="hero"id="hero">
+            <div class="content">
+                <h3>Hello, It's Me</h3>
+                <h1>ARVIND SINGH KAINTURA</h1>
+                <h2>And I'm a <span>Frontend Developer</span></h2>
+                <p> web designer and video editor with expertise in creating visually stunning projects. </p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a href="#" class="btn">Explore</a>
+            </div>
+            <div class="image">
+                <img src="me.jpg" alt="Profile Picture">
+            </div>
+        </section>
+    <section class="projects-section">
+      
+         <h2>My Projects</h2>
+         <div class="project-cardall">
+        <div class="project-card"id="projects">
+            <h3> fruits Website</h3>
+            <p>A fresh and vibrant website showcasing a variety of seasonal and exotic fruits </p>
+            <a href="shop.html">View Project</a>
+        </div>
+        <div class="project-card">
+            <h3>product landing page</h3>
+            <p>product landing website designed to showcase features,  and a user-friendly interface</p>
+            <a href="page.html">View Project</a>
+        </div>
+        <div class="project-card">
+            <h3>food store </h3>
+            <p>food store website offering fresh and high-quality products with easy online ordering and fast delivery..</p>
+            <a href="landing page.html">View Project</a>
+        </div>
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>A personal portfolio showcasing my skills.</p>
+            <a href="shop.html">View Project</a>
+        </div>
+        <div class="project-card">
+            <h3>E-commerce Site</h3>
+            <p>An online store with payment integration.</p>
+            <a href="shop.html">View Project</a>
+        </div>
+        <div class="project-card">
+            <h3>Weather App</h3>
+            <p>Displays weather information based on location.</p>
+            <a href="wether.html">View Project</a>
+        </div>
+         </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h1>Contact Me</h1>
+            <p>If you have any questions or would like to work together,feel free to reach out</p>
+            
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> Email: yourname@example.com</p>
+                <p><i class="fas fa-phone"></i> Phone: +123 456 7890</p>
+                <p><i class="fas fa-map-marker-alt"></i> Location: New Delhi, India</p>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+     <section class="about"id="about">
+            <div class="about-image">
+                <img src="ab.jpg" alt="Profile Picture">
+            </div>
+            <div class="about-content">
+                <h1>About Me</h1>
+                <h2>I'm a <span>Frontend Developer</span></h2>
+                <p>Hi, I'm arvind singh kaintura, a passionate Frontend Developer with expertise in creating stunning and user-friendly web experiences. With a strong foundation in HTML, CSS, and JavaScript, I specialize in crafting responsive websites that deliver seamless performance across all devices.</p>
+                <p>My goal is to design and develop visually appealing web applications that enhance user experience. I am always eager to learn new technologies and improve my skills.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </section>
+    
+</body>
+</html>
